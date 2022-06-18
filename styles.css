@@ -59,11 +59,24 @@ header > nav > button {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: box-shadow 0.2 linear;
+    position: relative;
+}
+
+@keyframes move-button {
+    from {
+        top: 0px;
+    }
+    to {
+        top: 5px;
+    }
 }
 
 header > nav > button:hover {
     box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.1),
         -1px -1px 5px 3px rgba(0, 0, 0, 0.1);
+    animation-name: move-button;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
 }
 
 /* HERO SECTION */
